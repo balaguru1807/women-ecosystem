@@ -3,7 +3,7 @@ import admin from "firebase-admin";
 import { createRequire } from "module";
 
 const require = createRequire(import.meta.url);
-const serviceAccount = require("/etc/secrets/serviceAccountKey.json","utf-8");
+const serviceAccount = require("/etc/secrets/serviceAccountkey.json","utf-8");
 
 if (!admin.apps.length) {
   admin.initializeApp({
