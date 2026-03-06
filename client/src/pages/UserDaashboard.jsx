@@ -225,10 +225,13 @@ export default function UserDashboard() {
   }, [guardianEmail, guardianEmails, lastLocation, meshEnabled, timerRunning]);
 
   // ====== Logout ======
-  const handleLogout = async () => {
-    await signOut(auth);
-    window.location.href = "/auth";
-  };
+ // inside component
+const navigate = useNavigate();
+
+const handleLogout = async () => {
+  await signOut(auth);
+  navigate("/auth");
+};
 
   // ✅ CALL POLICE (100)
   const callPolice = () => {
