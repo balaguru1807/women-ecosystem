@@ -482,7 +482,9 @@ app.post("/api/mesh-presence", verifyFirebaseToken, async (req, res) => {
     return res.status(500).json({ error: "Internal server error" });
   }
 });
-
+app.get("/health", (req, res) => {
+  res.status(200).send("Server running");
+});
 // ---------- Start server ----------
 
 const port = process.env.PORT || 4000;
