@@ -10,6 +10,7 @@ import {
   orderBy,
 } from "../firebase";
 import { useAuth } from "../context/authcontext.jsx";
+import { useNavigate } from "react-router-dom";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
 
