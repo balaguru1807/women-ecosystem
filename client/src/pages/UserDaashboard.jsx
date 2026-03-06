@@ -21,7 +21,7 @@ import {
 import { useAuth } from "../context/authcontext.jsx";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000" || "https://women-ecosystem-backend.onrender.com";
 
 // Distance between two lat/lng points (meters)
 function haversineMeters(a, b) {
